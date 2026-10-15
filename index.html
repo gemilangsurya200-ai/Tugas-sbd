@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portofolio Surya Gemilang — mahasiswa Teknik Informatika yang tertarik pada basis data relasional dan pengembangan sistem web."
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>Surya Gemilang — Database &amp; Web Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              display: ["Manrope", "sans-serif"],
+              mono: ["DM Mono", "monospace"],
+            },
+            colors: {
+              ink: "#17251f",
+              muted: "#66736b",
+              paper: "#f7f7f2",
+              accent: "#247a5a",
+              "accent-light": "#e5f0e8",
+              line: "#e4e8e0",
+            },
+            boxShadow: {
+              soft: "0 18px 60px rgba(23, 37, 31, 0.07)",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        color-scheme: light;
+        scroll-padding-top: 6rem;
+      }
+
+      body {
+        background:
+          radial-gradient(ellipse at 85% 8%, rgba(211, 231, 215, 0.5), transparent 32rem),
+          #f7f7f2;
+      }
+
+      ::selection {
+        color: #17251f;
+        background: #c6e1ca;
+      }
+
+      .grid-paper {
+        background-image: linear-gradient(rgba(36, 122, 90, 0.055) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(36, 122, 90, 0.055) 1px, transparent 1px);
+        background-size: 28px 28px;
+      }
+
+      .fade-up {
+        animation: fade-up 700ms ease-out both;
+      }
+
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-line/80 bg-paper/90 backdrop-blur-xl">
+      <nav
+        aria-label="Navigasi utama"
+        class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8"
+      >
+        <a href="#beranda" class="font-display text-lg font-extrabold tracking-tight">
+          SG<span class="text-accent">.</span>
+        </a>
+        <div class="hidden items-center gap-8 text-sm font-medium text-muted md:flex">
+          <a class="transition hover:text-accent" href="#tentang">Tentang</a>
+          <a class="transition hover:text-accent" href="#proyek">Proyek</a>
+          <a class="transition hover:text-accent" href="#pengalaman">Pengalaman</a>
+          <a class="transition hover:text-accent" href="#keahlian">Keahlian</a>
+        </div>
+        <a
+          href="mailto:surya.gemilang@student.uinjkt.ac.id"
+          class="rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold transition hover:border-accent hover:bg-accent hover:text-white"
+        >
+          Hubungi saya <span aria-hidden="true" class="ml-1">↗</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="beranda" class="mx-auto max-w-6xl px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24">
+        <div class="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div class="fade-up">
+            <p
+              class="mb-7 inline-flex items-center gap-2 rounded-full border border-accent/15 bg-white/70 px-3.5 py-2 font-mono text-[11px] uppercase tracking-[0.13em] text-accent"
+            >
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-40"></span>
+                <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+              </span>
+              Terbuka untuk kolaborasi
+            </p>
+            <h1 class="max-w-3xl font-display text-5xl font-extrabold leading-[1.06] tracking-[-0.055em] sm:text-7xl">
+              Merancang data.<br />
+              <span class="text-accent">Membangun solusi.</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-muted">
+              Halo, saya <strong class="font-semibold text-ink">Surya Gemilang</strong> — mahasiswa
+              Teknik Informatika yang tertarik pada basis data relasional, backend web, dan sistem
+              yang bekerja dengan rapi dari balik layar.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#proyek"
+                class="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-accent"
+              >
+                Lihat proyek <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                href="https://github.com/suryagemilang"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/60 px-6 py-3.5 text-sm font-semibold transition hover:border-ink/40"
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted">
+              <span class="inline-flex items-center gap-2">
+                <svg aria-hidden="true" class="h-4 w-4 text-accent" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18s6-5.373 6-10A6 6 0 1 0 4 8c0 4.627 6 10 6 10Zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Tangerang Selatan, Banten
+              </span>
+              <span class="hidden h-1 w-1 rounded-full bg-ink/25 sm:block"></span>
+              <span>UIN Syarif Hidayatullah Jakarta</span>
+            </div>
+          </div>
+
+          <div class="fade-up relative mx-auto w-full max-w-md" style="animation-delay: 120ms">
+            <div class="grid-paper absolute -inset-4 rotate-3 rounded-[2rem] opacity-60"></div>
+            <div class="relative overflow-hidden rounded-[1.75rem] border border-white bg-white p-7 shadow-soft sm:p-9">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs uppercase tracking-[0.16em] text-muted">Fokus saat ini</span>
+                <span class="rounded-full bg-accent-light px-3 py-1 font-mono text-[10px] text-accent">2026</span>
+              </div>
+              <div class="mt-8 flex h-36 items-end gap-3 rounded-2xl bg-paper p-5">
+                <div class="h-[43%] flex-1 rounded-t-md bg-accent/25"></div>
+                <div class="h-[66%] flex-1 rounded-t-md bg-accent/40"></div>
+                <div class="h-[52%] flex-1 rounded-t-md bg-accent/30"></div>
+                <div class="h-[84%] flex-1 rounded-t-md bg-accent/60"></div>
+                <div class="relative h-full flex-1 rounded-t-md bg-accent">
+                  <span class="absolute -top-7 left-1/2 -translate-x-1/2 font-mono text-[10px] text-accent">SQL</span>
+                </div>
+              </div>
+              <div class="mt-7 space-y-5">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="font-display font-bold">Database design</p>
+                    <p class="mt-1 text-sm text-muted">ERD · Normalisasi · SQL</p>
+                  </div>
+                  <span class="font-mono text-xs text-accent">01</span>
+                </div>
+                <div class="h-px bg-line"></div>
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="font-display font-bold">Web systems</p>
+                    <p class="mt-1 text-sm text-muted">Backend · CRUD · Integrasi data</p>
+                  </div>
+                  <span class="font-mono text-xs text-accent">02</span>
+                </div>
+                <div class="h-px bg-line"></div>
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="font-display font-bold">Cloud &amp; mobile</p>
+                    <p class="mt-1 text-sm text-muted">Google Cloud · Android</p>
+                  </div>
+                  <span class="font-mono text-xs text-accent">03</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute -bottom-5 -left-5 rounded-2xl border border-line bg-white px-4 py-3 shadow-soft"
+            >
+              <p class="font-mono text-[10px] uppercase tracking-wider text-muted">Sedang belajar</p>
+              <p class="mt-1 text-sm font-bold">Sistem yang scalable <span class="text-accent">↗</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tentang" class="border-y border-line bg-white/55">
+        <div class="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-20 md:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent">01 / Tentang saya</p>
+            <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Rapi dalam data,<br />jelas dalam tujuan.
+            </h2>
+          </div>
+          <div class="max-w-2xl">
+            <p class="text-base leading-8 text-muted sm:text-lg">
+              Saya adalah mahasiswa Teknik Informatika UIN Syarif Hidayatullah Jakarta dengan
+              ketertarikan pada perancangan basis data relasional, pemodelan data terstruktur, dan
+              pengembangan sistem backend web. Saya memahami integritas data, normalisasi tabel,
+              serta optimasi query SQL.
+            </p>
+            <p class="mt-4 text-base leading-8 text-muted sm:text-lg">
+              Dalam proyek mandiri maupun kegiatan organisasi, saya senang bekerja sistematis,
+              berkolaborasi, dan mengubah kebutuhan menjadi solusi yang dapat digunakan.
+            </p>
+            <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl bg-paper p-4">
+                <p class="font-display text-2xl font-extrabold">3NF</p>
+                <p class="mt-1 text-xs text-muted">Normalisasi relasional</p>
+              </div>
+              <div class="rounded-2xl bg-paper p-4">
+                <p class="font-display text-2xl font-extrabold">SQL</p>
+                <p class="mt-1 text-xs text-muted">Query &amp; pemodelan data</p>
+              </div>
+              <div class="col-span-2 rounded-2xl bg-paper p-4 sm:col-span-1">
+                <p class="font-display text-2xl font-extrabold">2025—</p>
+                <p class="mt-1 text-xs text-muted">Teknik Informatika · UIN Jakarta</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyek" class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent">02 / Pilihan karya</p>
+            <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Proyek pilihan</h2>
+          </div>
+          <p class="max-w-xs text-sm leading-6 text-muted">Eksplorasi sistem web dan desain basis data yang berorientasi pada kebutuhan nyata.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+          <article class="group overflow-hidden rounded-3xl border border-line bg-white transition hover:-translate-y-1 hover:shadow-soft">
+            <div class="grid-paper relative flex h-52 items-center justify-center overflow-hidden bg-[#edf4ec] p-8">
+              <div class="w-full max-w-sm rounded-2xl border border-white/80 bg-white p-4 shadow-lg">
+                <div class="flex items-center gap-2 border-b border-line pb-3">
+                  <span class="h-2 w-2 rounded-full bg-[#e7a196]"></span>
+                  <span class="h-2 w-2 rounded-full bg-[#e8ca81]"></span>
+                  <span class="h-2 w-2 rounded-full bg-[#8fbea0]"></span>
+                  <span class="ml-auto h-2 w-20 rounded-full bg-paper"></span>
+                </div>
+                <div class="grid grid-cols-[0.7fr_1.3fr] gap-3 pt-4">
+                  <div class="space-y-2">
+                    <div class="h-3 w-4/5 rounded bg-accent/75"></div>
+                    <div class="h-2 w-full rounded bg-line"></div>
+                    <div class="h-2 w-3/4 rounded bg-line"></div>
+                  </div>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="h-12 rounded-lg bg-accent-light"></div>
+                    <div class="h-12 rounded-lg bg-[#f1eee4]"></div>
+                    <div class="h-12 rounded-lg bg-[#e6edf4]"></div>
+                  </div>
+                </div>
+              </div>
+              <span class="absolute bottom-4 right-5 font-mono text-[10px] uppercase tracking-widest text-accent/70">PHP + MySQL</span>
+            </div>
+            <div class="p-6 sm:p-8">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="font-mono text-xs text-accent">01 / 2026</p>
+                  <h3 class="mt-2 font-display text-xl font-extrabold">Portofolio &amp; sistem basis data</h3>
+                </div>
+                <span class="rounded-full bg-paper px-3 py-1 font-mono text-xs text-muted">Akademik</span>
+              </div>
+              <p class="mt-4 text-sm leading-7 text-muted">
+                Merancang skema basis data relasional ternormalisasi hingga 3NF untuk galeri proyek,
+                kategori keahlian, dan log kontak. Antarmuka web responsif terhubung ke basis data
+                lokal dengan CRUD dinamis dan ringkasan statistik melalui agregasi serta subquery.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-muted">PHP</span>
+                <span class="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-muted">MySQL</span>
+                <span class="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-muted">Bootstrap</span>
+                <span class="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-muted">CRUD</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl border border-line bg-white transition hover:-translate-y-1 hover:shadow-soft">
+            <div class="relative flex h-52 items-center justify-center overflow-hidden bg-[#f0eee6] p-8">
+              <div class="relative grid w-full max-w-sm grid-cols-3 gap-3">
+                <div class="rounded-xl border border-[#dcd9cd] bg-white p-3 shadow-sm">
+                  <p class="font-mono text-[9px] uppercase text-accent">Pelanggan</p>
+                  <div class="mt-3 h-1.5 w-4/5 rounded bg-line"></div>
+                  <div class="mt-2 h-1.5 w-3/5 rounded bg-line"></div>
+                </div>
+                <div class="rounded-xl border border-[#dcd9cd] bg-white p-3 shadow-sm">
+                  <p class="font-mono text-[9px] uppercase text-accent">Pesanan</p>
+                  <div class="mt-3 h-1.5 w-4/5 rounded bg-line"></div>
+                  <div class="mt-2 h-1.5 w-3/5 rounded bg-line"></div>
+                </div>
+                <div class="rounded-xl border border-[#dcd9cd] bg-white p-3 shadow-sm">
+                  <p class="font-mono text-[9px] uppercase text-accent">Inventaris</p>
+                  <div class="mt-3 h-1.5 w-4/5 rounded bg-line"></div>
+                  <div class="mt-2 h-1.5 w-3/5 rounded bg-line"></div>
+                </div>
+                <svg aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 360 104" fill="none">
+                  <path d="M105 51h74M181 51h74" stroke="#247a5a" stroke-dasharray="4 4" stroke-width="1.5" />
+                  <circle cx="180" cy="51" r="3" fill="#247a5a" />
+                </svg>
+              </div>
+              <span class="absolute bottom-4 right-5 font-mono text-[10px] uppercase tracking-widest text-accent/70">PostgreSQL</span>
+            </div>
+            <div class="p-6 sm:p-8">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="font-mono text-xs text-accent">02 / 2026</p>
+                  <h3 class="mt-2 font-display text-xl font-extrabold">Inventaris &amp; katalog e-commerce</h3>
+                </div>
+                <span class="rounded-full bg-paper px-3 py-1 font-mono text-xs text-muted">Riset mandiri</span>
+              </div>
+              <p class="mt-4 text-sm leading-7 text-muted">
+                Mendesain ERD konseptual dan fisikal untuk transaksi, stok, dan pelanggan. Menerapkan
+                foreign key, cascade delete, serta check constraints; mengeksplorasi B-Tree indexing
+                untuk mempercepat filter riwayat pemesanan.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-muted">PostgreSQL</span>
+                <span class="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-muted">ERD</span>
+                <span class="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-muted">Indexing</span>
+                <span class="rounded-full border border-line px-3 py-1.5 font-mono text-[11px] text-muted">Constraints</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="pengalaman" class="border-y border-line bg-white/55">
+        <div class="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-20 md:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent">03 / Perjalanan</p>
+            <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Belajar sambil<br />berkontribusi.
+            </h2>
+            <div class="mt-8 border-l border-line pl-5">
+              <p class="font-mono text-xs uppercase tracking-wider text-muted">Pendidikan</p>
+              <p class="mt-2 font-display font-bold">S1 Teknik Informatika</p>
+              <p class="mt-1 text-sm text-muted">UIN Syarif Hidayatullah Jakarta</p>
+              <p class="mt-1 font-mono text-xs text-accent">2025 — sekarang</p>
+              <p class="mt-3 text-sm leading-6 text-muted">
+                Sistem Basis Data, Sistem Digital, Matematika Diskrit, Algoritma &amp; Pemrograman.
+              </p>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <article class="border-l-2 border-accent pl-5 sm:pl-7">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="font-display text-lg font-extrabold">Staf Divisi I-Merch</h3>
+                <span class="font-mono text-xs text-accent">2026 — sekarang</span>
+              </div>
+              <p class="mt-1 text-sm font-semibold text-muted">HIMTI UIN Syarif Hidayatullah Jakarta · Departemen Kewirausahaan</p>
+              <ul class="mt-4 space-y-2 text-sm leading-6 text-muted">
+                <li>• Mengelola pencatatan inventaris stok dan memastikan kecocokan data dengan persediaan fisik.</li>
+                <li>• Membantu rekap arus kas penjualan merchandise untuk mendukung transparansi pembukuan.</li>
+                <li>• Berkoordinasi lintas divisi dalam perencanaan logistik agenda festival teknologi kampus.</li>
+              </ul>
+            </article>
+            <div class="h-px bg-line"></div>
+            <article class="border-l-2 border-accent/30 pl-5 sm:pl-7">
+              <p class="font-mono text-xs text-accent">PELATIHAN &amp; SERTIFIKASI · 2026</p>
+              <h3 class="mt-3 font-display text-lg font-extrabold">JuaraGCP Season 12 — Sprint Session</h3>
+              <p class="mt-1 text-sm text-muted">Google Cloud Platform</p>
+              <p class="mt-3 text-sm leading-6 text-muted">
+                Pengenalan komputasi awan terdistribusi, Cloud Storage, dan deployment layanan basis data.
+              </p>
+            </article>
+            <article class="border-l-2 border-accent/30 pl-5 sm:pl-7">
+              <p class="font-mono text-xs text-accent">PELATIHAN &amp; SERTIFIKASI · 2026</p>
+              <h3 class="mt-3 font-display text-lg font-extrabold">Android Dev Weekly Workshop</h3>
+              <p class="mt-1 text-sm text-muted">GDG on Campus UIN Jakarta</p>
+              <p class="mt-3 text-sm leading-6 text-muted">
+                Perancangan antarmuka dan pengelolaan persistence data lokal pada aplikasi mobile.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="keahlian" class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+        <div class="max-w-2xl">
+          <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent">04 / Toolkit</p>
+          <h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Keahlian &amp; bahasa</h2>
+          <p class="mt-4 leading-7 text-muted">Perangkat dan konsep yang saya gunakan untuk merancang, membangun, dan menjaga kualitas sistem.</p>
+        </div>
+        <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">Data</p>
+            <h3 class="mt-3 font-display font-bold">Database &amp; modeling</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">MySQL · PostgreSQL · SQLite<br />ERD · Normalisasi 1NF–3NF<br />DDL / DML · SQL</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">Build</p>
+            <h3 class="mt-3 font-display font-bold">Bahasa &amp; web</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">PHP / Laravel · HTML5 / CSS3<br />JavaScript · Kotlin / Java<br />SQL</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">Workflow</p>
+            <h3 class="mt-3 font-display font-bold">Tools &amp; ekosistem</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">Git / GitHub · VS Code<br />phpMyAdmin<br />Google Cloud Platform</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">Communication</p>
+            <h3 class="mt-3 font-display font-bold">Bahasa</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">Bahasa Indonesia<br /><span class="text-xs">Penutur asli</span><br />Bahasa Inggris<br /><span class="text-xs">Kemampuan kerja profesional</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 pb-20 sm:px-8 sm:pb-24">
+        <div class="mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-ink px-6 py-12 text-white sm:px-12 sm:py-16">
+          <div class="grid items-end gap-8 md:grid-cols-[1fr_auto]">
+            <div>
+              <p class="font-mono text-xs uppercase tracking-[0.18em] text-[#9bd0ae]">Punya ide atau proyek?</p>
+              <h2 class="mt-4 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-5xl">
+                Mari membangun sesuatu yang berdampak.
+              </h2>
+              <p class="mt-4 max-w-lg leading-7 text-white/65">
+                Terbuka untuk kolaborasi, diskusi teknologi, dan kesempatan belajar bersama.
+              </p>
+            </div>
+            <a
+              href="mailto:surya.gemilang@student.uinjkt.ac.id"
+              class="inline-flex w-fit items-center gap-3 rounded-full bg-[#c6e1ca] px-6 py-3.5 text-sm font-bold text-ink transition hover:bg-white"
+            >
+              Kirim email <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-white/15 pt-6 text-sm text-white/65">
+            <a class="transition hover:text-white" href="mailto:surya.gemilang@student.uinjkt.ac.id">surya.gemilang@student.uinjkt.ac.id</a>
+            <a class="transition hover:text-white" href="https://linkedin.com/in/suryagemilang" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a class="transition hover:text-white" href="https://github.com/suryagemilang" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-line">
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p>© <span id="tahun">2026</span> Surya Gemilang. Dibuat dengan rasa ingin tahu dan secangkir kopi.</p>
+        <a class="font-mono transition hover:text-accent" href="#beranda">Kembali ke atas ↑</a>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("tahun").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
